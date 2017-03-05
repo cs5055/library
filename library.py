@@ -14,9 +14,12 @@ member_item = soup.find('span',id="ctl00_CPHmaster_lblissued").text.strip()
 table = soup.find('table',id="ctl00_CPHmaster_DgIssued")
 print('Member name: '+member_name+' | Member code: '+member_code+'\nMember dept: '+member_dept+'\n'+'Category: '+member_cat+' | Overdue: '+member_due+' | Issue item: '+member_item)
 print('\nBook List: \n')
-rows = table.find_all('tr')[1:]
-for tr in rows:
-	cols = tr.find_all('td')
-	for td in cols:
-		print td.text
-	print('')
+if member_item == '': 
+	print('No books issued')
+else:
+	rows = table.find_all('tr')[1:]
+	for tr in rows:
+		cols = tr.find_all('td')
+		for td in cols:
+			print td.text
+		print('')
