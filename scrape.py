@@ -1,4 +1,4 @@
-#codedby cs50
+#codedby cs5055
 import requests
 from bs4 import BeautifulSoup 
 id = raw_input('Enter id: ')
