@@ -1,3 +1,3 @@
-# Library
+# library
 
-This library.py uses Beautiful Soup library to scrape webopac to retrive books issued
+Simple python script that fetch your library details.
